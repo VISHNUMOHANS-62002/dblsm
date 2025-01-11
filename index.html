@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Library Management System" />
+    <title>Library Management System</title>
+    
+    <!-- Material UI -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    
+    <!-- React -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    
+    <!-- Material UI -->
+    <script src="https://unpkg.com/@mui/material@5.0.0/umd/material-ui.development.js" crossorigin></script>
+    
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background: url('https://cdn.pixabay.com/photo/2016/01/19/01/42/library-1147815_1280.jpg') center center fixed;
+        background-size: cover;
+        min-height: 100vh;
+        position: relative;
+      }
+
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.7)
+        );
+        z-index: -1;
+      }
+
+      #root {
+        min-height: 100vh;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.6)
+        );
+      }
+
+      .search-bar {
+        border-radius: 25px !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+      }
+
+      .home-icon {
+        cursor: pointer;
+        margin-right: 16px;
+        color: white;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .home-icon:hover {
+        color: #e3f2fd;
+        transform: scale(1.1);
+      }
+
+      .page-content {
+        background: rgba(255, 255, 255, 0.95) !important;
+        border-radius: 8px !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+        padding: 24px;
+        margin: 16px 0;
+      }
+
+      .MuiPaper-root {
+        background: rgba(255, 255, 255, 0.95) !important;
+      }
+
+      .MuiCard-root {
+        background: rgba(255, 255, 255, 0.9) !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .MuiCard-root:hover {
+        transform: translateY(-5px);
+      }
+
+      .MuiButton-contained {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+      }
+
+      .MuiTableContainer-root {
+        background: rgba(255, 255, 255, 0.95) !important;
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 16px 0;
+      }
+
+      .MuiTableHead-root {
+        background: rgba(25, 118, 210, 0.1);
+      }
+
+      .MuiTableRow-root:hover {
+        background: rgba(25, 118, 210, 0.05) !important;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: rgba(25, 118, 210, 0.5);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(25, 118, 210, 0.7);
+      }
+
+      /* Additional styles for better contrast */
+      .MuiTypography-root {
+        color: rgba(0, 0, 0, 0.87);
+      }
+
+      .MuiAppBar-root {
+        background: rgba(25, 118, 210, 0.95) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+      }
+
+      .MuiButton-contained {
+        background-color: rgba(25, 118, 210, 0.9) !important;
+      }
+
+      .MuiButton-contained:hover {
+        background-color: rgba(25, 118, 210, 1) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="text/babel" src="app.js"></script>
+  </body>
+</html>
